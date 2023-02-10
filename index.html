@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 이서윤체 폰트 적용을 위한 코드 */
+        @font-face {
+          font-family: "LeeSeoyun";
+          src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff")
+            format("woff");
+          font-weight: normal;
+          font-style: normal;
+        }
+        
+        /* body태그 자체에 css 요소 부여 */
+          body {
+            font-family: "LeeSeoyun";
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-image: url("./background.png");
+        }
+
+        .container {
+            width: 390px;
+            background-color: #d378bb;
+            height: 100%;
+        }
+
+        .photds {
+            margin-top: 30px;
+        }
+
+        .photo-frame {
+            background-color: white;
+            margin: 15px 20px;
+            height: 400px;
+
+            background-size: cover;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .f-title {
+	        font-size: 25px;
+            font-weight: 900;
+            color: white;
+        }
+        .f-date {
+	       font-size: 15px;
+           font-weight: 500;
+           color: white;
+        }
+        #image1 {
+	        background-image: url("./KakaoTalk_20230210_172824315.webp");
+        }
+
+        #image2 {
+            background-image: url("./KakaoTalk_20230210_172824315_01.webp");
+        }
+
+        #image3 {
+          	background-image: url("./KakaoTalk_20230210_172824315_02.webp");
+        }
+        
+        #image4 {
+            background-image: url("./KakaoTalk_20230210_172824315_03.jpg");
+        }
+        .photo-description {
+	        /* 배경은 검게, 글자는 흰 색으로 */
+	        color: rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
+
+            /* 가로 너비는 내부 콘텐츠에 딱 맞게! */
+        	width: fit-content;
+            padding: 0 20px;
+            margin-bottom: 10px;
+
+            /* 경계선 */
+            border-radius: 10px;
+        }
+    // 1번 설정
+        .photo-frame {
+            position: relative;
+        }
+    // 2번 설정
+        .photo-description {
+            position: absolute;
+            bottom: 0;
+            transform: translate(-50%);
+            left: 50%;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+                <div class="photos">
+              <div id="image1" class="photo-frame">
+                        <span id="desc1" class="photo-description">
+                            꿀잼 목포 당일치기 여행!
+                        </span>
+                    </div>
+              <div id="image2" class="photo-frame">
+                        <span id="desc2" class="photo-description">
+                            세상에서 제일 사랑하는 자기야♥
+                        </span>
+                    </div>
+              <div id="image3" class="photo-frame">
+                        <span id="desc3" class="photo-description">
+                            이제 계속 놀러가구 사진 많이 찍으면
+                        </span>
+                    </div>
+              <div id="image4" class="photo-frame">
+                        <span id="desc4" class="photo-description">
+                            더 많이 만들어 줄께♥
+                        </span>
+                    </div>
+                </div>
+          <div class="footer">
+            <p class="f-title">김지연 바부 똥멍충이★</p>
+            <p class="f-date">2023.02.10</p>
+        </div>
+    </body>
+    </html>
